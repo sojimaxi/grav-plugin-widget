@@ -5,7 +5,6 @@ icon: trello
 author:
   name: Oluwasoji Ojo
   email: itwizardy@gmail.com
-  url: http://iweb.city
 homepage: https://github.com/sojimaxi/grav-plugin-widget
 keywords: widget, modular, inject, embed, markdown, twig, grav
 bugs: https://github.com/sojimaxi/grav-plugin-widget/issues

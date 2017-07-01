@@ -306,8 +306,8 @@ class WidgetPlugin extends Plugin
                             if ($inject) {
 
                                 /**
-                                 * Sometimes twig changes don't get picked up you can force this
-                                 * by temporarily disabling cache the page
+                                 * Sometimes twig changes don't get picked up immediately you can force this
+                                 * by temporarily disabling cache for the page
                                  */
 //                                $inject->modifyHeader('cache_enable',false);
 //                                $inject->modifyHeader('never_cache_twig',true);
