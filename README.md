@@ -137,7 +137,7 @@ $ bin/grav clear-cache
 
 ```
 # Credit
-Thanks goes to Team Grav for creating such an awesome system and also got to learn more from their [Page Inject](https://github.com/getgrav/grav-plugin-widget) on how content injection works.
+Thanks goes to Team Grav for creating such an awesome system and also got to learn more from their [Page-Inject Plugin](https://github.com/getgrav/grav-plugin-page-inject) on how content injection works.
 
 [grav]: http://github.com/getgrav/grav
 
