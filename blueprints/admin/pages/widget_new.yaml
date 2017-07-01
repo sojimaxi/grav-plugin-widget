@@ -1,0 +1,51 @@
+rules:
+  slug:
+    pattern: '[a-zA-Zа-яA-Я0-9_\-]+'
+    min: 1
+    max: 200
+
+form:
+  validation: loose
+  fields:
+
+    section:
+        type: section
+        title: Create Widget
+
+    title:
+      type: text
+      label: Widget Title
+      validate:
+        required: true
+
+    folder:
+      type: hidden
+      default: '@slugify-title'
+
+    route:
+      type: hidden
+      label: PLUGIN_ADMIN.PAGE
+      classes: fancy
+      default: /widgets
+      validate:
+        required: true
+
+    name:
+      type: select
+      classes: fancy
+      label: Widget Template
+      help: Select a modular template to use
+      data-options@: '\Grav\Common\Page\Pages::modularTypes'
+      options:
+        '': '--- Select ---'
+      validate:
+        required: true
+
+    modular:
+      type: hidden
+      default: 1
+      validate:
+        type: bool
+
+    blueprint:
+      type: blueprint

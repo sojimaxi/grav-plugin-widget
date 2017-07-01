@@ -1,0 +1,113 @@
+title: Widget
+rules:
+  slug:
+    pattern: "[a-z][a-z0-9_\-]+"
+    min: 2
+    max: 80
+form:
+  fields:
+    tabs:
+      fields:
+        content:
+          fields:
+            widget_extra:
+              type: section
+              underline: true
+              data-type@: [\Grav\Plugin\WidgetPlugin::featureEnabled,extras,section]
+
+              fields:
+                header.class:
+                  type: text
+                  label: Class
+                  help: 'Page Class'
+                header.bg_image:
+                  type: filepicker
+                  config-folder@: plugins.widget.bg_image_source
+                  label: Background Image
+                  help: 'Image source is configured from widget plugin'
+                  preview_images: true
+                  accept:
+                    - .png
+                    - .jpg
+                header.image_align:
+                  type: toggle
+                  label: Image Align
+                  highlight: ''
+                  default: ''
+                  options:
+                      '': None
+                      left: left
+                      right: right
+                header.link:
+                  type: text
+                  label: Link
+                  placeholder: /home or http://www.example.com
+
+                header.link_text:
+                  type: text
+                  label: Link Text
+                  placeholder: Read More
+
+        widget:
+          type: tab
+          title: Widget
+          data-type@: [\Grav\Plugin\WidgetPlugin::featureEnabled,widget_tab,tab]
+          fields:
+
+            header.widget.areas:
+              label: Widget Areas
+              style: vertical
+              type: list
+              btnLabel: Add Location
+
+              fields:
+                .location: &location
+                  name: loc
+                  type: select
+                  label: Location
+                  classes: fancy
+                  @data-options: '\Grav\Plugin\WidgetPlugin::definedWidgetAreas'
+                  @data-help: '\Grav\Plugin\WidgetPlugin::locationHelp'
+                  options:
+                   'default': Default
+
+                .widgets: &widgets
+                   name: widget
+                   type: list
+                   label: Default Widgets
+                   style: vertical
+                   btnLabel: Add Widget
+
+                   fields:
+                     .load:
+                       type: select
+                       size: large
+                       classes: fancy
+                       label: Widget
+                       show_all: false
+                       show_modular: true
+                       show_root: false
+                       show_slug: true
+                       help: "Widget"
+                       '@data-options': '\Grav\Plugin\WidgetPlugin::widgetTypes'
+                       options:
+                         '': '--- Select ---'
+
+                     .enabled:
+                       type: toggle
+                       label: Status
+                       highlight: 1
+                       default: 1
+                       options:
+                           1: Enabled
+                           0: Disabled
+                       validate:
+                           type: bool
+
+            header.widget.options:
+              type: array
+              label: Widget Options
+              help: Optional Widget Options
+              placeholder_key: Option name
+              placeholder_value: Option value
+              required: false

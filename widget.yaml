@@ -1,0 +1,36 @@
+enabled: true
+
+# The parent folder that houses all widget pages
+parent : widgets
+
+# Enable the use of widget() from twig files
+enable_twig: true
+
+# Enable the use of the [widget area="area_name" /] shortcode
+#enable_shortcode: false
+
+enable_modal: true
+
+# Create widget modal in admin
+add_modals:
+  -
+    label: Create Widget
+    blueprint: admin/pages/widget_new
+    show_in: bar
+
+# enable widget extras like link, background image, class e.t.c
+extras: true
+
+bg_image_source: 'theme@:/images' #@see https://learn.getgrav.org/forms/blueprints/how-to-add-file-upload#destination
+
+# Allow widget to have widgets.
+#Initially discouraged since it can create an endless loop of widgets calling each other
+# but it can be used now since a recurse level limitation is in place
+# this field's blueprint is meant for advanced users only.
+widgets_in_widget: false
+
+# future use to auto append widget for a page without need to explicitly call function or shortcode
+#auto_inject: false
+
+# future use to enable conditional logic for each widget similar to If-Menu
+#enable_logic: false

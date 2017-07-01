@@ -1,0 +1,4 @@
+extends@:
+  - parent@
+  - type: widget
+    context: blueprints://pages

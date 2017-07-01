@@ -1,0 +1,15 @@
+{# @var page \Grav\Common\Page\Page #}
+{% set modules = page.header.widgets %}
+{% macro pageLinkName(text) %}{{  text|lower|replace({' ':'-'}) }}{% endmacro %}
+{% macro slugName(text) %}{{  text|lower|replace({'_':'-'}) }}{% endmacro %}
+{% macro templateClass(text) %}{{  text|lower|replace({'modular/':''})|replace({'_':'-'}) }}{% endmacro %}
+
+{% block content %}
+    {{ page.content }}
+    {# @var module \Grav\Common\Page\Page #}
+    {% for module in page.collection() %}
+        {{ vardump(module) }}
+        <div id="{{ _self.slugName(module.slug) }}" class="widget {{ _self.templateClass(module.template) }} {{ _self.pageLinkName(module.menu) }} "></div>
+        {{ module.content }}
+    {% endfor %}
+{% endblock %}
