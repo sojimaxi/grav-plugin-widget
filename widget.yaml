@@ -25,7 +25,7 @@ extras: true
 #bg_image_source: 'theme@:/images' #@see https://learn.getgrav.org/forms/blueprints/how-to-add-file-upload#destination
 
 # Allow widget to have widgets.
-#Initially discouraged since it can create an endless loop of widgets calling each other
+# Initially discouraged since it can create an endless loop of widgets calling each other
 # but it can be used now since a recurse level limitation is in place
 # this field's blueprint is meant for advanced users only.
 widgets_in_widget: false

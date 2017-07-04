@@ -1,9 +1,8 @@
-# v1.0.0
-## 07/01/2017
+# v1.1.1
+## 07/04/2017
 
-1. [](#new)
-    * ChangeLog started...
-    * Add blueprints and  update README
+1. [](#improved)
+    * Fix various documentations
     
 # v1.1.0
 ## 07/04/2017
@@ -17,3 +16,11 @@
     * Changed Background Image field to text instead of filepicker to enable support for internal and external sources
     * Removed Background Image Source from Widget Blueprint
     * Update README
+
+# v1.0.0
+## 07/01/2017
+
+1. [](#new)
+    * ChangeLog started...
+    * Add blueprints and  update README
+    
