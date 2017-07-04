@@ -24,7 +24,7 @@ You should now have all the plugin files under
     /your/site/grav/user/plugins/widget
 
 # Config Defaults
-This are the default configurations.
+These are the default configurations.
 
 ```yaml
 enabled: true
@@ -37,7 +37,6 @@ add_modals:
     blueprint: admin/pages/widget_new
     show_in: bar
 extras: true
-bg_image_source: 'theme@:/images'
 widgets_in_widget: false
 
 ```
@@ -81,10 +80,10 @@ select a `Widget Template`, click `continue` make changes and finally click `Sav
 ![](https://i.imgur.com/WXkrEF2.jpg)
 ![](https://i.imgur.com/lL3wlxr.jpg)
 
-All new widgets are created in the default widgets folder configurable from the widgets plugin.
+All new widgets are created in the default widgets folder configurable from the widget plugin.
 
 ### Adding Widgets to Page 
-Here is a screeshot of how to add widgets to a page
+Here is a screenshot of how to add widgets to a page
 
 ![](http://i.imgur.com/d5athK0.gif)
 
@@ -112,9 +111,8 @@ widget:
 ```
 
 # Global Widgets
-Global widgets were introduce to make by defining generally used widgets in the site configuration.
-Widgets defined in the site configuration apply to all pages.  Go to `Dashboard -> Configuration -> Site`, scroll down to the Global Widgets section 
- to add them just the same way you add widgets to a page. 
+Global widgets were introduce to make defining generally used widgets easier by doing so in the site configuration.
+Widgets defined in the site configuration apply to all pages.  Go to your `Dashboard -> Configuration -> Site`, scroll down to the Global Widgets section to add them similarly to how you add widgets to a page. 
 
  ![](http://i.imgur.com/hiOfRAi.png)
  
