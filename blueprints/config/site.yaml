@@ -1,0 +1,21 @@
+@extends:
+    '@parent'
+
+form:
+  fields:
+    widget_section:
+      type: section
+      title: Global Widgets
+      text: These are widgets available to all pages
+      underline: true
+
+      fields:
+        widget.areas:
+          label: Widget Areas
+          type: list
+          style: vertical
+          btnLabel: Add Location
+
+          import@:
+            type: widget_areas
+            context: blueprints://

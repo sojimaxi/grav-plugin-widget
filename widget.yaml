@@ -21,7 +21,8 @@ add_modals:
 # enable widget extras like link, background image, class e.t.c
 extras: true
 
-bg_image_source: 'theme@:/images' #@see https://learn.getgrav.org/forms/blueprints/how-to-add-file-upload#destination
+# deprecated
+#bg_image_source: 'theme@:/images' #@see https://learn.getgrav.org/forms/blueprints/how-to-add-file-upload#destination
 
 # Allow widget to have widgets.
 #Initially discouraged since it can create an endless loop of widgets calling each other

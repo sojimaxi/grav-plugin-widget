@@ -111,6 +111,13 @@ widget:
                 - { load: /widgets/_email-subscription, enabled: true }
 ```
 
+# Global Widgets
+Global widgets were introduce to make by defining generally used widgets in the site configuration.
+Widgets defined in the site configuration apply to all pages.  Go to `Dashboard -> Configuration -> Site`, scroll down to the Global Widgets section 
+ to add them just the same way you add widgets to a page. 
+
+ ![](http://i.imgur.com/hiOfRAi.png)
+ 
 # Example Usage
 
 **Twig**
@@ -125,6 +132,12 @@ or use ` widget(location) ` to use a named widget area.
 
 ```twig
 {{ widget('top') }}
+```
+
+To prevent merging global widgets defined for the location with those defined in a page, set the second argument to false.
+
+```twig
+{{ widget('content-bottom',false) }}
 ```
 
 ### Grav Fixes in Development

@@ -34,11 +34,12 @@ class WidgetTwigExtension extends \Twig_Extension implements \Twig_Extension_Glo
      * Load the called widget
      * @param $context
      * @param string $area
+     * @param bool $merge_global combine with site-wide widgets
      * @return string
      */
-    public function loadWidget($context, $area='default')
+    public function loadWidget($context, $area='default', $merge_global = true)
     {
-        $widgets = WidgetPlugin::process($context,$area);
+        $widgets = WidgetPlugin::process($context,$area,$merge_global);
         return !empty($widgets)?$widgets:'';
     }
 
