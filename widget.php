@@ -262,9 +262,10 @@ class WidgetPlugin extends Plugin
      * Process widget for page
      * @param $context
      * @param $area
+     * @param $merge_global bool
      * @return string
      */
-    public static function process($context,$area)
+    public static function process($context, $area, $merge_global)
     {
         /**
          * This variable is meant to prevent indefinite recursive widgets;
@@ -275,12 +276,21 @@ class WidgetPlugin extends Plugin
 
         /* @var Page $page */
         $page = $context['page'];
+
+        /* @var Config $config */
+        $config = $context['config'];
+        $global_widgets  = $config->get('site.widget',false);
+
         $headers = $page->header();
         $has_widget = array_key_exists(self::KEY,$headers);
         $content = '';
+        $has_widget = $merge_global ? ($global_widgets || $has_widget): $has_widget;
 
         if($has_widget & $rc_level++ <= self::MAX_RECURSE){
-            $wigs = $headers->{self::KEY};
+            $wigs = (array) $headers->{self::KEY};
+            if($merge_global && $global_widgets)
+                $wigs = $global_widgets ? array_merge_recursive($global_widgets,$wigs) : $wigs;
+
             if($wigs){
                 $locs =[];
 
