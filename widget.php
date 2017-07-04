@@ -1,8 +1,8 @@
 <?php
 /**
- * PageInject
+ * Widget
  *
- * This plugin embeds other Grav pages from markdown URLs
+ * This plugin uses your modular templates as reusable widget
  *
  * Licensed under MIT, see LICENSE.
  */
