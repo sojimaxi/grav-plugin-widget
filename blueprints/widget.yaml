@@ -14,26 +14,26 @@ form:
               type: section
               underline: true
               data-type@: [\Grav\Plugin\WidgetPlugin::featureEnabled,extras,section]
+              ordering@: 1000
 
               fields:
                 header.id:
                   type: text
-                  label: Page Id
-                  help: 'HTML id Attribute'
+                  label: Id
+                  help: 'Element id Attribute'
                 header.class:
                   type: text
                   label: Class
-                  help: 'HTML Class Attributes'
+                  help: 'Element Class Attributes'
                 header.background_color:
                   type: colorpicker
                   label: Background Color
-                  help: 'HTML Class Attributes'
+                  help: 'Element Background Color'
                 header.background_image:
                   type: text
                   label: Background Image <br> See <a href="https://learn.getgrav.org/forms/blueprints/how-to-add-file-upload#destination">Grav doc</a>
-                  default: 'theme@:/images'
-                  placeholder: 'path | self@ | page@:path | theme@:path'
-                  help: 'Image source is configured from widget plugin'
+                  placeholder: 'path | page@:path | theme@:path'
+                  help: 'Element Background Image'
                 header.image_align:
                   type: toggle
                   label: Image Align
@@ -43,6 +43,7 @@ form:
                       '': None
                       left: left
                       right: right
+                  help: 'Image Alignment'
                 header.link:
                   type: text
                   label: Link

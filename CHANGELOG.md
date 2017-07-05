@@ -1,3 +1,11 @@
+# v1.1.2
+## 07/05/2017
+
+1. [](#bugfix)
+    * Add ordering@ to widget extra section to kept it below order fields
+    * Remove default from background image and all other extras
+    * Improve help tips text
+    
 # v1.1.1
 ## 07/04/2017
 
