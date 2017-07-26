@@ -8,7 +8,6 @@
     {{ page.content }}
     {# @var module \Grav\Common\Page\Page #}
     {% for module in page.collection() %}
-        {{ vardump(module) }}
         <div id="{{ _self.slugName(module.slug) }}" class="widget {{ _self.templateClass(module.template) }} {{ _self.pageLinkName(module.menu) }} "></div>
         {{ module.content }}
     {% endfor %}
