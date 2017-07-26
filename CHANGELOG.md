@@ -1,3 +1,9 @@
+# v1.1.3
+## 07/26/2017
+
+1. [](#bugfix)
+    * Fix for invalid argument when empty widget field exist
+    
 # v1.1.2
 ## 07/05/2017
 

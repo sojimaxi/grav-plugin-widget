@@ -296,13 +296,14 @@ class WidgetPlugin extends Plugin
 
                 /* Fix empty call with widget('') instead of widget() */
                 $area = empty($area)?'default':$area;
+                if(isset($wigs['areas'])) { //prevent invalid argument for foreach
+                    foreach ($wigs['areas'] as $idx => $node) {
+                        $key = $node['location'];
 
-                foreach ($wigs['areas'] as $idx=>$node) {
-                    $key = $node['location'];
-
-                    /* Merge multiple area definition into one */
-                    if(isset($node['widgets']))
-                        $locs[$key] = isset($locs[$key])? array_merge($locs[$key],$node['widgets']): $node['widgets'];
+                        /* Merge multiple area definition into one */
+                        if (isset($node['widgets']))
+                            $locs[$key] = isset($locs[$key]) ? array_merge($locs[$key], $node['widgets']) : $node['widgets'];
+                    }
                 }
 
                 if(array_key_exists($area,$locs)){
