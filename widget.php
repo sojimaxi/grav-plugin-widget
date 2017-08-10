@@ -38,6 +38,9 @@ class WidgetPlugin extends Plugin
     const MAX_RECURSE = 2;
     static $definedAreas;
 
+    const EXTRA_ENABLED_WIDGET_ONLY = 1;
+    const EXTRA_ENABLED_ALL_PAGES = 2;
+
     /**
      * Return a list of subscribed events.
      *
@@ -233,22 +236,38 @@ class WidgetPlugin extends Plugin
             if($wiw)
                 return $type;
 
-            /* @var Uri $uri */
-            $uri = Grav::instance()['uri'];
-            $widget_root = $config->get('plugins.widget.parent');
+            return self::isWidget()?'ignore':$type;
 
-            /**
-             * Is current page a widget?
-             * e.g /admin/pages/widget_root/_widget_name
-             *
-            */
-            $is_widget = ($uri->paths(2) == $widget_root);
-            return $is_widget?'ignore':$type;
+        }
+        elseif ($config_field == 'extras') {
+            $enabled = $config->get("plugins.widget.extras");
+            $ret =  'ignore';
 
+            if($enabled == self::EXTRA_ENABLED_ALL_PAGES)
+                $ret = $type;
+            elseif ($enabled == self::EXTRA_ENABLED_WIDGET_ONLY && self::isWidget()){
+                $ret = $type;
+            }
+            return $ret;
         }
         else
             $ret = ($enabled = $config->get("plugins.widget.{$config_field}")) ? $type : 'hidden';
         return $ret;
+    }
+
+    static function isWidget()
+    {
+        /* @var Uri $uri */
+        $uri = Grav::instance()['uri'];
+        $widget_root =  Grav::instance()['config']->get('plugins.widget.parent');
+
+        /**
+         * Is current page a widget?
+         * e.g /admin/pages/widget_root/_widget_name
+         *
+         */
+        $is_widget = ($uri->paths(2) == $widget_root);
+        return $is_widget;
     }
 
     static function locationHelp(){
