@@ -1,3 +1,7 @@
+# v1.1.4
+## 08/10/2017
+1. [](#improved)
+    * Improved widget extra options
 # v1.1.3
 ## 07/26/2017
 
