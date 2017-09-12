@@ -1,3 +1,8 @@
+# v1.1.5
+## 09/12/2017
+1. [](#bugfix)
+    * Fix Twig runtime error Github issues #7 & #8
+    
 # v1.1.4
 ## 08/10/2017
 1. [](#improved)
@@ -41,4 +46,3 @@
 1. [](#new)
     * ChangeLog started...
     * Add blueprints and  update README
-    

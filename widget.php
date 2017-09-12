@@ -301,14 +301,17 @@ class WidgetPlugin extends Plugin
         $global_widgets  = $config->get('site.widget',false);
 
         $headers = $page->header();
-        $has_widget = array_key_exists(self::KEY,$headers);
+        $page_widget = property_exists($headers,self::KEY)?(array) $headers->{self::KEY}: [];
+        $has_widget = !empty($page_widget);
         $content = '';
         $has_widget = $merge_global ? ($global_widgets || $has_widget): $has_widget;
 
         if($has_widget & $rc_level++ <= self::MAX_RECURSE){
-            $wigs = (array) $headers->{self::KEY};
+        	$wigs =[];
+        	if($page_widget)
+            	$wigs = $page_widget;
             if($merge_global && $global_widgets)
-                $wigs = $global_widgets ? array_merge_recursive($global_widgets,$wigs) : $wigs;
+                $wigs = $global_widgets ? array_merge_recursive($wigs,(array)$global_widgets) : $wigs;
 
             if($wigs){
                 $locs =[];
