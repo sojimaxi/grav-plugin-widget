@@ -1,5 +1,5 @@
 name: Widget
-version: 1.1.5
+version: 1.2.0
 description: "**Widget** is a plugin that lets you embed reusable modular components into pages using a simple header configuration"
 icon: trello
 author:
@@ -71,3 +71,15 @@ form:
         type: bool
         required: true
       help: Enable the use of widget() twig function in your theme to load widgets.
+
+    enable_shortcode:
+      type: toggle
+      label: Widget ShortCode
+      default: 0
+      options:
+        1: Enable
+        0: Disable
+      validate:
+        type: bool
+        required: true
+      help: 'Use widget via shortcode. Example Usage : [widget load="/widgets/_widget-name" /].'
