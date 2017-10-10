@@ -102,6 +102,7 @@ class WidgetPlugin extends Plugin
 
         $this->enable([
 //            'onBlueprintCreated'   => ['onBlueprintCreated', 0],
+			  'onPageContentRaw' => ['onPageContentRaw', 0],
         ]);
     }
 
@@ -357,6 +358,67 @@ class WidgetPlugin extends Plugin
         $rc_level--;
 
         return $content;
+    }
+
+    /**
+     * Grab the raw page content to process defined widget shortcodes
+     */
+	public function onPageContentRaw(Event $event)
+	{
+		  /** @var Page $page */
+		  $page = $event['page'];
+
+			$config = $this->mergeConfig($page);
+
+			$twig = $this->grav['twig'];
+
+			if ($config->get('enabled') && $config->get('enable_shortcode')) {
+				// Get raw content and substitute all formulas by a unique token
+				$raw = $page->getRawContent();
+				$function = function ($matches) use (&$page) {
+					$search = $matches[0];
+                    $params = $this->parseShortCodeParams($matches[1]);
+                    $page_path = $params['load'];
+                    $inject = $page->find($page_path);
+                    if ($inject)
+                        $content = $inject->content();
+                    else
+                        $content = $search;  # replace with orignal
+
+                    return  $content;
+				};
+
+				// set the parsed content back into as raw content for further processing
+				$page->setRawContent($this->processWidgetInContent($raw, $function));
+			}
+    }
+
+	/**
+	 * This enables us to par
+	 */
+	protected function processWidgetInContent($content, $function)
+    {
+        $regex = '/\[widget (.+?)\/?]/i';
+        return preg_replace_callback($regex, $function, $content);
+    }
+
+    /**
+     * Parse shortcode params
+     * Available params are
+     * 1. load
+     */
+    public function parseShortCodeParams($attrs){
+        $paramRegex = '/([\w-]+)\s*=\s*"([^"]*)"(?:\s|$)|([\w-]+)\s*=\s*\'([^\']*)\'(?:\s|$)/';
+        // parse out the arguments
+        preg_match_all($paramRegex, $attrs, $matches,PREG_SET_ORDER);
+        $params = array();
+        foreach ($matches as $v) {
+			if (!empty($v[1]))
+				$params[strtolower($v[1])] = trim($v[2]);
+            elseif (!empty($v[3]))
+                $params[strtolower($v[3])] = trim($v[4]);
+        }
+        return $params;
     }
 
 }

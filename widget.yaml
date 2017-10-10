@@ -6,8 +6,8 @@ parent : widgets
 # Enable the use of widget() from twig files
 enable_twig: true
 
-# Enable the use of the [widget area="area_name" /] shortcode
-#enable_shortcode: false
+# Enable the use of the [widget load="path_to_widget" /] shortcode to load a single widget
+enable_shortcode: false
 
 enable_modal: true
 
