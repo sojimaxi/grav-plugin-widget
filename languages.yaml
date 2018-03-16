@@ -1,0 +1,29 @@
+en:
+  PLUGIN_ADMIN:
+    PARENT: Parent Folder <br> <span style="font-size: .75rem; color:red">Update pages that contain widgets if changed</span>
+    PARENT_HELP: Folder that stores all the widgets within the user/page. This directory is auto-generaed if it does not exist.
+    WIDGET_EXTRA: Widget Extras
+    WIDGET_EXTRA_HELP: This will enable optional widget extras like link, background image, class e.t.c in the page content tab
+    WIDGET_EXTRA_ENABLED_WIDGET_ONLY: Enabled Widget Only
+    WIDGET_EXTRA_ENABLED_ALL_PAGES: Enabled All Pages
+    WIDGETS_IN_WIDGET: Widgets in Widget <br> <span style="font-size: .75rem; color:red">For Advanced Users</span>
+    WIDGETS_IN_WIDGET_HELP: Allow widget to contain their own widgets.
+    ENABLE_TWIG: Enable Twig Function
+    ENABLE_TWIG_HELP: Enable the use of widget() twig function in your theme to load widgets.
+    ENABLE_SHORTCODE: Widget ShortCode
+    ENABLE_SHORTCODE_HELP: 'Use widget via shortcode. Example Usage : [widget load="/widgets/_widget-name" /].'
+
+fr:
+  PLUGIN_ADMIN:
+    PARENT: Dosser Parent <br> <span style="font-size: .75rem; color:red">Mettez à jour les pages avec des widgets si changé</span>
+    PARENT_HELP: Dossier situé dans user/pages dans lequel sont stockés les widgets. Ce dossier est automatiquement créé.
+    WIDGET_EXTRA: Options supplémentaires
+    WIDGET_EXTRA_HELP: Cela active des options supplémentaires dans les widgets comme le lien, l'image de fond, une classe CSS dans l'onglet de contenu de la page.
+    WIDGET_EXTRA_ENABLED_WIDGET_ONLY: Activé seulement sur les widgets
+    WIDGET_EXTRA_ENABLED_ALL_PAGES: Activé sur toutes les pages
+    WIDGETS_IN_WIDGET: Widgets dans un Widget <br> <span style="font-size: .75rem; color:red">Utilisateurs Avancés</span>
+    WIDGETS_IN_WIDGET_HELP: Permet à un widget de contenir ses propres widgets.
+    ENABLE_TWIG: Activer la fonction Twig
+    ENABLE_TWIG_HELP: Active l'utilisation de la fonction twig widget() dans les thèmes pour charger les widgets.
+    ENABLE_SHORTCODE: ShortCode Widget
+    ENABLE_SHORTCODE_HELP: 'Utiliser widget via les shortcodes. Exemple : [widget load="/widgets/_nom-widget"].'
