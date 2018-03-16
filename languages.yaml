@@ -12,6 +12,39 @@ en:
     ENABLE_TWIG_HELP: Enable the use of widget() twig function in your theme to load widgets.
     ENABLE_SHORTCODE: Widget ShortCode
     ENABLE_SHORTCODE_HELP: 'Use widget via shortcode. Example Usage : [widget load="/widgets/_widget-name" /].'
+  PLUGIN_WIDGET:
+    CREATE_WIDGET: Create widget
+    WIDGET_TITLE: Widget Title
+    WIDGET_TEMPLATE: Widget Template
+    SELECT: '--- Select ---'
+    LOCATION: Location
+    DEFAULT: Default
+    WIDGETS: Widgets
+    WIDGET: Widget
+    ADD_WIDGET: Add Widget
+    GLOBAL_WIDGET: Global Widgets
+    GLOBAL_WIDGET_HELP: Ce sont les widgets disponibles sur toutes les pages
+    WIDGET_AERAS: Widget Areas
+    ADD_LOCATION: Add Location
+    STATUS: Status
+    WIDGET_OPTIONS: Widget Options
+    WIDGET_OPTIONS_HELP: Optional Widget Options
+    WIDGET_OPTION_NAME: Option Name
+    WIDGET_OPTION_VALUE: Option Value
+    ID: Id
+    ID_HELP: Element id Attribute
+    CLASS: Class
+    CLASS_HELP: Element class Attribute
+    BACKGROUND_COLOR: Background Color
+    BACKGROUND_COLOR_HELP: Element Background Color
+    BACKGROUND_IMAGE: Background Image <br> See <a href="https://learn.getgrav.org/forms/blueprints/how-to-add-file-upload#destination">Grav doc</a>
+    BACKGROUND_IMAGE_HELP: Element Background Image
+    IMAGE_ALIGN: Image Align
+    IMAGE_ALIGN_HELP: Image Alignment
+    LINK: Link
+    LINK_PLACEHOLDER: /home or http://www.example.com
+    LINK_TEXT: Link Text
+    LINK_TEXT_HELP: Read more
 
 fr:
   PLUGIN_ADMIN:
@@ -27,3 +60,35 @@ fr:
     ENABLE_TWIG_HELP: Active l'utilisation de la fonction twig widget() dans les thèmes pour charger les widgets.
     ENABLE_SHORTCODE: ShortCode Widget
     ENABLE_SHORTCODE_HELP: 'Utiliser widget via les shortcodes. Exemple : [widget load="/widgets/_nom-widget"].'
+  PLUGIN_WIDGET:
+      CREATE_WIDGET: Ajouter un widget
+      WIDGET_TITLE: Titre du widget
+      WIDGET_TEMPLATE: Template du widget
+      SELECT: '--- Sélectionner ---'
+      LOCATION: Position
+      DEFAULT: Par défaut
+      WIDGETS: Widgets
+      WIDGET: Widget
+      ADD_WIDGET: Ajouter un widget
+      GLOBAL_WIDGET: Widgets globaux
+      WIDGET_AERAS: Positions des widgets
+      ADD_LOCATION: Ajouter une position
+      STATUS: Statut
+      WIDGET_OPTIONS: Options du widget
+      WIDGET_OPTIONS_HELP: Options facultatives du widget
+      WIDGET_OPTION_NAME: Nom de l'option
+      WIDGET_OPTION_VALUE: Valeur de l'option
+      ID: Id
+      ID_HELP: Attribut id de l'élément
+      CLASS: Class
+      CLASS_HELP: Attribut Class de l'élément
+      BACKGROUND_COLOR: Couleur de fond
+      BACKGROUND_COLOR_HELP: Couleur de fond de l'élément
+      BACKGROUND_IMAGE: Image de fond <br> Voir <a href="https://learn.getgrav.org/forms/blueprints/how-to-add-file-upload#destination">Documentation Grav</a>
+      BACKGROUND_IMAGE_HELP: Image de fond de l'élément
+      IMAGE_ALIGN: Alignement image
+      IMAGE_ALIGN_HELP: Alignement de l'image
+      LINK: Lien
+      LINK_PLACEHOLDER: /accueil ou https://www.exemple.com
+      LINK_TEXT: Texte du lien
+      LINK_TEXT_HELP: En savoir plus
