@@ -16,70 +16,70 @@ form:
   fields:
     enabled:
       type: toggle
-      label: Plugin status
+      label: PLUGIN_ADMIN.PLUGIN_STATUS
       highlight: 1
       default: 1
       options:
-        1: Enabled
-        0: Disabled
+        1: PLUGIN_ADMIN.ENABLED
+        0: PLUGIN_ADMIN.DISABLED
       validate:
         type: bool
     parent:
       type: text
-      label: Parent Folder <br> <span style="font-size: .75rem; color:red">Update pages that contain widgets if changed</span>
+      label: PLUGIN_ADMIN.PARENT
       default: widgets
       validate:
         type: slug
         required: true
-      help: Folder that stores all the widgets within the user/page. This directory is auto-generaed if it does not exist.
+      help: PLUGIN_ADMIN.PARENT_HELP
     extras:
       type: select
-      label: Widget Extras
+      label: PLUGIN_ADMIN.WIDGET_EXTRA
       highlight: 1
       default: 1
       options:
-        2: Enabled All Pages
-        1: Enabled Widget Only
-        0: Disabled
+        2: PLUGIN_ADMIN.WIDGET_EXTRA_ENABLED_ALL_PAGES
+        1: PLUGIN_ADMIN.WIDGET_EXTRA_ENABLED_WIDGET_ONLY
+        0: PLUGIN_ADMIN.DISABLED
       validate:
         type: number
-      help: This will enable optional widget extras like link, background image, class e.t.c in the page content tab
+      help: PLUGIN_ADMIN.WIDGET_EXTRA_HELP
 
     widgets_in_widget:
       type: toggle
-      label: Widgets in Widget <br> <span style="font-size: .75rem; color:red">For Advanced Users</span>
+      label: PLUGIN_ADMIN.WIDGETS_IN_WIDGET
       highlight: 0
       default: 0
       options:
-        1: Enabled
-        0: Disabled
+        1: PLUGIN_ADMIN.ENABLED
+        0: PLUGIN_ADMIN.DISABLED
       validate:
         type: bool
         required: true
-      help: Allow widget to contain their own widgets.
+      help: PLUGIN_ADMIN.WIDGETS_IN_WIDGET_HELP
 
     enable_twig:
       type: toggle
-      label: Enable Twig Function
+      label: PLUGIN_ADMIN.ENABLE_TWIG
       highlight: 1
       default: 1
       disabled: true
       options:
-        1: Enabled
-        0: Disabled
+        1: PLUGIN_ADMIN.ENABLED
+        0: PLUGIN_ADMIN.DISABLED
       validate:
         type: bool
         required: true
-      help: Enable the use of widget() twig function in your theme to load widgets.
+      help: PLUGIN_ADMIN.ENABLE_TWIG_HELP
 
     enable_shortcode:
       type: toggle
-      label: Widget ShortCode
+      label: PLUGIN_ADMIN.ENABLE_SHORTCODE
       default: 0
       options:
-        1: Enable
-        0: Disable
+        1: PLUGIN_ADMIN.ENABLED
+        0: PLUGIN_ADMIN.DISABLED
       validate:
         type: bool
         required: true
-      help: 'Use widget via shortcode. Example Usage : [widget load="/widgets/_widget-name" /].'
+      help: PLUGIN_ADMIN.ENABLE_SHORTCODE_HELP
