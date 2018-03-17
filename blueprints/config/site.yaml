@@ -5,16 +5,16 @@ form:
   fields:
     widget_section:
       type: section
-      title: Global Widgets
-      text: These are widgets available to all pages
+      title: PLUGIN_WIDGET.GLOBAL_WIDGET
+      text: PLUGIN_WIDGET.GLOBAL_WIDGET_HELP
       underline: true
 
       fields:
         widget.areas:
-          label: Widget Areas
+          label: PLUGIN_WIDGET.WIDGET_AERAS
           type: list
           style: vertical
-          btnLabel: Add Location
+          btnLabel: PLUGIN_WIDGET.ADD_LOCATION
 
           import@:
             type: widget_areas

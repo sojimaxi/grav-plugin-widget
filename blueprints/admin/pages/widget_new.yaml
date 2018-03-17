@@ -10,11 +10,11 @@ form:
 
     section:
         type: section
-        title: Create Widget
+        title: PLUGIN_WIDGET.CREATE_WIDGET
 
     title:
       type: text
-      label: Widget Title
+      label: PLUGIN_WIDGET.WIDGET_TITLE
       validate:
         required: true
 
@@ -33,11 +33,11 @@ form:
     name:
       type: select
       classes: fancy
-      label: Widget Template
+      label: PLUGIN_WIDGET.WIDGET_TEMPLATE
       help: Select a modular template to use
       data-options@: '\Grav\Common\Page\Pages::modularTypes'
       options:
-        '': '--- Select ---'
+        '': PLUGIN_WIDGET.SELECT
       validate:
         required: true
 
