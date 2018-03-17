@@ -1,12 +1,19 @@
+# v1.3.0
+## 03/17/2018
+
+1. [](#new)
+    * Multilingual support
+    * Added French locale
+1. [](#bugfix)
+    * Fixed changelog formatting
+
 # v1.2.0
 ## 10/10/2017
 
 1. [](#new)
     * Ability to use widget in markdown via shortcode.
-
 1. [](#bugfix)
-    * Fix changelog. Grav does not display changelog correctly if gaps misssing
-
+    * Fixed changelog formatting
 1. [](#improved)
     * Update documentations
 
@@ -48,7 +55,6 @@
 1. [](#new)
     * Added Site-wide Widget. It is now possible to define widgets in the site configuration and they will be available to all pages
     * Added Background Color to Widget Extra
-
 1. [](#improved)
     * Changed Background fields to header.background_*
     * Changed Background Image field to text instead of filepicker to enable support for internal and external sources
