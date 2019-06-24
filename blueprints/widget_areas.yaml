@@ -5,8 +5,8 @@ form:
       type: select
       label: PLUGIN_WIDGET.LOCATION
       classes: fancy
-      @data-options: '\Grav\Plugin\WidgetPlugin::definedWidgetAreas'
-      @data-help: '\Grav\Plugin\WidgetPlugin::locationHelp'
+      '@data-options': '\Grav\Plugin\WidgetPlugin::definedWidgetAreas'
+      '@data-help': '\Grav\Plugin\WidgetPlugin::locationHelp'
       options:
        'default': PLUGIN_WIDGET.DEFAULT
 
