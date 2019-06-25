@@ -1,5 +1,5 @@
 name: Widget
-version: 1.3.0
+version: 1.3.2
 description: "**Widget** is a plugin that lets you embed reusable modular components into pages using a simple header configuration"
 icon: trello
 author:
@@ -83,3 +83,15 @@ form:
         type: bool
         required: true
       help: PLUGIN_ADMIN.ENABLE_SHORTCODE_HELP
+
+    append_area_name:
+      type: toggle
+      label: PLUGIN_ADMIN.APPEND_AREA_NAME
+      default: 0
+      options:
+        1: PLUGIN_ADMIN.ENABLED
+        0: PLUGIN_ADMIN.DISABLED
+      validate:
+        type: bool
+        required: true
+      help: PLUGIN_ADMIN.APPEND_AREA_NAME_HELP

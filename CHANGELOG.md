@@ -1,3 +1,15 @@
+# v1.3.2
+## 06/25/2019
+
+1. [](#improved)
+    * Remove redundancy in the "area" form dropdown [#16](https://github.com/sojimaxi/grav-plugin-widget/issues/16)
+
+# v1.3.1
+## 06/24/2019
+
+1. [](#bugfix)
+    * Fixed yaml lint errors
+
 # v1.3.0
 ## 03/17/2018
 

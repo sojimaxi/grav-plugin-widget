@@ -213,10 +213,12 @@ class WidgetPlugin extends Plugin
         if(!self::$definedAreas){
             /* @var Config $config */
             $config = Grav::instance()['config'];
+            $appendAreaName =  $config->get('plugins.widget.append_area_name');
 
             if($da = $config->get('theme.widget.areas'))
                 foreach ($da as $item) {
-                    self::$definedAreas[$item] = ucwords(strtr($item,'-',' '))." ($item)";
+                    $location = ucwords(strtr($item,'-',' '));
+                    self::$definedAreas[$item] = $appendAreaName ? $location." ($item)" : $location;
 
                 }
         }
