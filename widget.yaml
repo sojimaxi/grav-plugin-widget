@@ -35,3 +35,6 @@ widgets_in_widget: false
 
 # future use to enable conditional logic for each widget similar to If-Menu
 #enable_logic: false
+
+# Append the widget area value in the Location select option in parenthesis
+append_area_name: false
