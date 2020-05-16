@@ -37,6 +37,7 @@ class WidgetPlugin extends Plugin
     const KEY = 'widget';
     const MAX_RECURSE = 2;
     static $definedAreas;
+    static $parent;
 
     const EXTRA_ENABLED_WIDGET_ONLY = 1;
     const EXTRA_ENABLED_ALL_PAGES = 2;
@@ -71,8 +72,7 @@ class WidgetPlugin extends Plugin
         /* @var UniformResourceLocator $locator */
         $locator = Grav::instance()['locator'];
         $page_dir = $locator->findResource('user://pages',true);
-        $widget_root = Grav::instance()['config']->get('plugins.widget.parent');
-        $wig_dir = $page_dir.'/'.$widget_root;
+        $wig_dir = $page_dir.self::rootDirectory();
         if(!is_dir($wig_dir))
             mkdir($wig_dir);
 
@@ -165,8 +165,7 @@ class WidgetPlugin extends Plugin
 
         /* skip if the list has been generated before */
         if(!$list){
-            $config = Grav::instance()['config'];
-            $widget_root = $config->get('plugins.widget.parent');
+            $widget_root = self::rootDirectory();
 
             //TODO: fetch display style from blueprint
             $display  = 'title_path';
@@ -178,7 +177,7 @@ class WidgetPlugin extends Plugin
             */
             $types = Pages::parentsRawRoutes();
             foreach ($types as $name => $title) {
-                if (strpos($name, "/{$widget_root}/") !== 0) {
+                if (strpos($name, "{$widget_root}/") !== 0) {
                     continue;
                 }
 
@@ -271,6 +270,16 @@ class WidgetPlugin extends Plugin
          */
         $is_widget = ($uri->paths(2) == $widget_root);
         return $is_widget;
+    }
+
+    static function rootDirectory()
+    {
+        if(!self::$parent){
+        $widget_root =  Grav::instance()['config']->get('plugins.widget.parent');
+        // e.g /widgets
+        self::$parent = '/'.$widget_root;
+        }
+        return self::$parent;
     }
 
     static function locationHelp(){
