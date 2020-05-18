@@ -256,6 +256,11 @@ class WidgetPlugin extends Plugin
         return $ret;
     }
 
+    static function folderPattern()
+    {
+        return self::isWidget() ? '[_][a-z0-9_\-]+' : '[a-z][a-z0-9_\-]+';
+    }
+
     static function isWidget()
     {
         /* @var Uri $uri */
@@ -267,7 +272,7 @@ class WidgetPlugin extends Plugin
          * e.g /admin/pages/widget_root/_widget_name
          *
          */
-        return ($uri->paths(2) == $widget_root);
+        return isset($uri->paths()[2]) && ($uri->paths(2) == $widget_root);
     }
 
     static function rootDirectory()

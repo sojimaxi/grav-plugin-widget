@@ -1,3 +1,10 @@
+# v1.4.1
+## 05/18/2020
+
+1. [](#bugfix)
+    * Fixed conflict with the new parent page explorer [#19](https://github.com/sojimaxi/grav-plugin-widget/issues/19).
+    * Fixed the folder regex pattern and apply it to only modular pages within the widgets parent folder.
+
 # v1.4.0
 ## 05/18/2020
 
