@@ -1,3 +1,11 @@
+# v1.4.0
+## 05/18/2020
+
+1. [](#new)
+    * Added Inherited widgets for subpage from parent pages [#18](https://github.com/sojimaxi/grav-plugin-widget/issues/18)
+1. [](#improved)
+    * Improved widget loading performance with a static cache of already processed widgets
+
 # v1.3.2
 ## 06/25/2019
 
