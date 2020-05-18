@@ -26,7 +26,8 @@ form:
       type: hidden
       label: PLUGIN_ADMIN.PAGE
       classes: fancy
-      default: /widgets
+      # default: /widgets
+      data-default@: '\Grav\Plugin\WidgetPlugin::rootDirectory'
       validate:
         required: true
 

@@ -66,9 +66,26 @@ form:
               type: list
               btnLabel: PLUGIN_WIDGET.ADD_LOCATION
 
-              import@:
-                type: widget_areas
-                context: blueprints://
+              fields:
+                .location:
+                  import@:
+                    type: widget_location
+                    context: blueprints://
+#                .visibility:
+#                  type: toggle
+#                  data-type@: [\Grav\Plugin\WidgetPlugin::featureEnabled,subpage_inherit,toggle]
+#                  label: PLUGIN_WIDGET.VISIBILITY
+#                  highlight: page
+#                  default: page
+#                  options:
+#                    page: PLUGIN_WIDGET.VISIBILITY_PAGE
+#                    page_subpage: PLUGIN_WIDGET.VISIBILITY_PAGE_SUBPAGE
+#                    subpage: PLUGIN_WIDGET.VISIBILITY_SUBPAGE
+                .widgets:
+                  import@:
+                    type: widget_widgets
+                    context: blueprints://
+
             header.widget.options:
               type: array
               label: PLUGIN_WIDGET.WIDGET_OPTIONS

@@ -38,3 +38,6 @@ widgets_in_widget: false
 
 # Append the widget area value in the Location select option in parenthesis
 append_area_name: false
+
+# Enable SubPages inherit parent widget
+subpage_inherit: false

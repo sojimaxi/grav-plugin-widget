@@ -25,7 +25,7 @@ en:
     WIDGET: Widget
     ADD_WIDGET: Add Widget
     GLOBAL_WIDGET: Global Widgets
-    GLOBAL_WIDGET_HELP: Ce sont les widgets disponibles sur toutes les pages
+    GLOBAL_WIDGET_HELP: These are widgets available to all pages
     WIDGET_AERAS: Widget Areas
     ADD_LOCATION: Add Location
     STATUS: Status
@@ -47,6 +47,13 @@ en:
     LINK_PLACEHOLDER: /home or http://www.example.com
     LINK_TEXT: Link Text
     LINK_TEXT_HELP: Read more
+    SUBPAGE_INHERIT: 'Enable Subpage Inheritance <br> <span style="font-size: .75rem; color:red">Allow subpages inherit from parent</span>'
+    SUBPAGE_INHERIT_HELP: Subpages inherit parent widget
+    VISIBILITY: 'Show on: <br> <span style="font-size: .75rem; color:#794747">Make these widgets available to</span>'
+    VISIBILITY_PAGE: 'This Page Only'
+    VISIBILITY_PAGE_SUBPAGE: 'This Page & SubPages'
+    VISIBILITY_SUBPAGE: 'SubPages Only'
+    LOCATION_HELP: 'SubPages Only'
 
 fr:
   PLUGIN_ADMIN:
@@ -75,6 +82,7 @@ fr:
     WIDGET: Widget
     ADD_WIDGET: Ajouter un widget
     GLOBAL_WIDGET: Widgets globaux
+    GLOBAL_WIDGET_HELP: Ce sont les widgets disponibles sur toutes les pages
     WIDGET_AERAS: Positions des widgets
     ADD_LOCATION: Ajouter une position
     STATUS: Statut

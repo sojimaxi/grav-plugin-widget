@@ -16,6 +16,12 @@ form:
           style: vertical
           btnLabel: PLUGIN_WIDGET.ADD_LOCATION
 
-          import@:
-            type: widget_areas
-            context: blueprints://
+          fields:
+            .location:
+              import@:
+                type: widget_location
+                context: blueprints://
+            .widgets:
+              import@:
+                type: widget_widgets
+                context: blueprints://
