@@ -258,7 +258,7 @@ class WidgetPlugin extends Plugin
 
     static function folderPattern()
     {
-        return self::isWidget() ? '[_][a-z0-9_\-]+' : '[a-z][a-z0-9_\-]+';
+        return self::isWidget() ? '[_][a-zA-Zа-яA-Я0-9_\-]+' : '[a-zA-Zа-яA-Я0-9_\-]+';
     }
 
     static function isWidget()
