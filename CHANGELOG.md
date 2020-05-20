@@ -1,3 +1,9 @@
+# v1.4.2
+## 05/20/2020
+
+1. [](#bugfix)
+    * Updated the folder regex rule.
+
 # v1.4.1
 ## 05/18/2020
 

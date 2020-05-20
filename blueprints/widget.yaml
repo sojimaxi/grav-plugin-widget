@@ -1,11 +1,11 @@
-title: PLUGIN_WIDGET.WIDGET
 rules:
   slug:
-    pattern: '[a-z][a-z0-9_\-]+'
+    pattern: '[a-zA-Zа-яA-Я0-9_\-]+'
     data-pattern@: [\Grav\Plugin\WidgetPlugin::folderPattern]
-    min: 2
-    max: 80
+    min: 1
+    max: 200
 form:
+  validation: loose
   fields:
     tabs:
       fields:
