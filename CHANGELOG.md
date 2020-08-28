@@ -1,3 +1,9 @@
+# v1.4.3
+## 08/28/2020
+
+1. [](#bugfix)
+    * Fix error from undefined $locations variable.
+
 # v1.4.2
 ## 05/20/2020
 

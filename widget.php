@@ -316,7 +316,7 @@ class WidgetPlugin extends Plugin
         $content = '';
         $locations = [];
         $sortWidgetLocations = function ($widgets) {
-
+            $sorted_locations = [];
             if ($widgets) {
 
                 if (isset($widgets['areas'])) { //prevent invalid argument for foreach
@@ -325,14 +325,14 @@ class WidgetPlugin extends Plugin
 
                         /* Merge multiple area definition into one */
                         if (isset($node['widgets']))
-                            $locations[$key] = isset($locations[$key]) ? array_merge($locations[$key], $node['widgets']) : $node['widgets'];
+                            $sorted_locations[$key] = isset($sorted_locations[$key]) ? array_merge($sorted_locations[$key], $node['widgets']) : $node['widgets'];
                     }
                 }
 
 
             }
 
-            return $locations;
+            return $sorted_locations;
         };
 
         if (null === $processed_widgets) {
