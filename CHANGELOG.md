@@ -1,3 +1,9 @@
+# v1.5.0
+## 04/05/2021
+
+1. [](#bugfix)
+    * Fix the Internal error due to admin plugin v1.10+
+
 # v1.4.3
 ## 08/28/2020
 

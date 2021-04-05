@@ -20,6 +20,7 @@ use Grav\Common\Uri;
 use Grav\Common\Utils;
 use RocketTheme\Toolbox\Event\Event;
 use RocketTheme\Toolbox\ResourceLocator\UniformResourceLocator;
+use Grav\Plugin\Admin\Admin;
 
 /**
  * Class WidgetsPlugin
@@ -170,12 +171,16 @@ class WidgetPlugin extends Plugin
             //TODO: fetch display style from blueprint
             $display = 'title_path';
 
+            /** @var Pages $pages */
+            $pages = Admin::enablePages();
+
             /**
              * Get pages
              * e.g Pages::parentsRawRoutes(),Pages::parents(),Pages::types(),
              * Pages::getHomeRoute(),Pages::pageTypes(),Pages::getTypes()
              */
-            $types = Pages::parentsRawRoutes();
+            $types = $pages->getList($pages->find($widget_root), 0, true);
+
             foreach ($types as $name => $title) {
                 if (strpos($name, "{$widget_root}/") !== 0) {
                     continue;
